@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Message</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("bg_special.png") no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .click-area {
+      position: absolute;
+      cursor: pointer;
+      background: rgba(0, 0, 255, 0); /* invisible */
+    }
+
+    /* Play button */
+    #play-btn {
+      left: 677px;
+      top: 285px;
+      width: 175px;
+      height: 153px;
+    }
+
+    /* Back button */
+    #back-btn {
+      left: 183px;
+      top: 60px;
+      width: 365px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Play button -->
+  <div id="play-btn" class="click-area"></div>
+
+  <!-- Back button -->
+  <div id="back-btn" class="click-area"></div>
+
+  <script>
+    // Go to video page
+    document.getElementById("play-btn").addEventListener("click", () => {
+      window.location.href = "special_video.html";
+    });
+
+    // Back to levels
+    document.getElementById("back-btn").addEventListener("click", () => {
+      window.location.href = "levels.html";
+    });
+  </script>
+
+</body>
+</html>

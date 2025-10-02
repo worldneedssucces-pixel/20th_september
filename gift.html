@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couples Game 💕</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .game-container {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      padding: 20px;
+      width: 350px;
+      text-align: center;
+      display: none;
+    }
+
+    #start-screen {
+      text-align: center;
+    }
+
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1493;
+    }
+
+    .question {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .options button {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+    }
+
+    #result {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: green;
+    }
+
+    .gift-img {
+      width: 100%;
+      max-width: 250px;
+      margin-top: 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .code-box {
+      margin-top: 15px;
+      background: #f5f5f5;
+      border: 2px dashed #ff69b4;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <h1>💕 Welcome to Our Love Quiz 💕</h1>
+    <p>Let’s see how much you know about "Us"! 🥰</p>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div class="game-container" id="game-container">
+    <div id="quiz-content">
+      <p class="question" id="question"></p>
+      <div class="options" id="options"></div>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "Where did we first meet?",
+        options: ["School", "Park", "Online", "At a friend's house"],
+        answer: "Online"
+      },
+      {
+        question: "What’s my favorite color?",
+        options: ["Blue", "Black", "Pink", "Red"],
+        answer: "Black"
+      },
+      {
+        question: "Who says 'I love you' first most of the time?",
+        options: ["Me", "You 😉"],
+        answer: "Me"
+      },
+      {
+        question: "What’s our dream trip together?",
+        options: ["Paris", "Dubai", "Makkah & Madinah", "New York"],
+        answer: "Makkah & Madinah"
+      }
+    ];
+
+    let currentQ = 0;
+
+    function startGame() {
+      document.getElementById("start-screen").style.display = "none";
+      document.getElementById("game-container").style.display = "block";
+      loadQuestion();
+    }
+
+    function loadQuestion() {
+      if (currentQ < questions.length) {
+        document.getElementById("question").innerText = questions[currentQ].question;
+        const optionsDiv = document.getElementById("options");
+        optionsDiv.innerHTML = "";
+        questions[currentQ].options.forEach(opt => {
+          let btn = document.createElement("button");
+          btn.innerText = opt;
+          btn.onclick = () => checkAnswer(opt);
+          optionsDiv.appendChild(btn);
+        });
+      } else {
+        document.getElementById("quiz-content").innerHTML = `
+          <h2>🎉 Congratulations Love! 🎉</h2>
+          <p>You cleared the quiz! Here’s your gift:</p>
+          <img src="gift.png" alt="Gift" class="gift-img">
+          <div class="code-box">Code 1: RIAYBVCTFVBR4E3T7U</div>
+          <div class="code-box">Code 2: RIP7C4EEY3E9H9XV9K</div>
+          <p>Forever Yours 💖</p>
+          <button onclick="location.href='levels.html'">⬅ Back to Levels</button>
+        `;
+      }
+    }
+
+    function checkAnswer(selected) {
+      if (selected === questions[currentQ].answer) {
+        document.getElementById("result").innerText = "✅ Correct!";
+        setTimeout(() => {
+          currentQ++;
+          document.getElementById("result").innerText = "";
+          loadQuestion();
+        }, 1000);
+      } else {
+        document.getElementById("result").innerText = "❌ Try Again!";
+      }
+    }
+  </script>
+</body>
+</html>

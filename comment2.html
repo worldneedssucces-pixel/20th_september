@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comment 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('bg_comment2.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 1228px;
+      top: 48.5px;
+      width: 237px;
+      height: 80px;
+      cursor: pointer;
+      border: none;
+      background: rgba(214, 51, 108, 0.8);
+      border-radius: 12px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .back-btn:hover {
+      background: rgba(180, 20, 80, 0.9);
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background song for this comment -->
+  <audio autoplay loop>
+    <source src="hona_tha_pyar.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Back button -->
+  <button class="back-btn" onclick="window.location.href='gallery.html'">⬅ Back</button>
+
+</body>
+</html>

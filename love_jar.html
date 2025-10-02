@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Jar ❤</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffd6e0, #ffe8f0);
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #d6336c;
+      padding: 20px;
+    }
+
+    .jar {
+      width: 180px;
+      height: 250px;
+      background: #fff;
+      border: 5px solid #d6336c;
+      border-radius: 20px;
+      margin: 40px auto;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .jar::before {
+      content: "";
+      width: 80px;
+      height: 30px;
+      background: #d6336c;
+      border-radius: 15px 15px 0 0;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .note {
+      background: #fffbe7;
+      border: 2px dashed #d6336c;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 60%;
+      font-size: 18px;
+      display: none;
+      animation: pop 0.4s ease-in-out;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #d6336c;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .back-btn:hover {
+      background: #b02254;
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 Reasons Why I Love You, Hejab 💌</h1>
+
+  <div class="jar" onclick="showReason()"></div>
+  <div class="note" id="note"></div>
+
+  <button class="back-btn" onclick="window.location.href='levels.html'">⬅ Back</button>
+
+  <script>
+    const reasons = [
+      "You never left me when I was alone — that's why I love you ❤",
+      "You blocked boys for me, and I blocked girls for you — that's why I love you 💕",
+      "Even though you are Sunni and I am Shia, our love stayed strong — that's why I love you 🌙",
+      "We are in a long-distance relationship but never gave up — that's why I love you 💌",
+      "You are so sexy and pretty — that's why I love you 😍",
+      "You are my Hejab, my everything — that's why I love you 💖",
+      "Every fight made us stronger — that's why I love you 💪",
+      "Because you are my safe place — that's why I love you 🏡",
+      "No matter the mood swings, you still care — that's why I love you 🌹",
+      "I will never leave you — that's why I love you 🥰",
+      "You make me smile even on my worst days — that's why I love you 😊",
+      "Your laugh is my favorite sound — that's why I love you 🎶",
+      "You understand me when no one else does — that's why I love you 💡",
+      "You believe in us when others doubt — that's why I love you ✨",
+      "You are the most loyal person I know — that's why I love you 💎",
+      "You turned my loneliness into happiness — that's why I love you 🌈",
+      "You make me feel lucky every day — that's why I love you 🍀",
+      "You support me in everything — that's why I love you 🙌",
+      "You are my forever prayer come true — that's why I love you 🤲",
+      "You complete me in every way — that's why I love you 🧩",
+      "You stayed even when distance tried to break us — that's why I love you 🚀",
+      "Your jealousy is cute because it shows you care — that's why I love you 😘",
+      "You make even boring talks feel special — that's why I love you 📞",
+      "You accept me with all my flaws — that's why I love you 🌸",
+      "You are my partner, my best friend, my lover — that's why I love you 💑",
+      "I can be myself with you — that's why I love you 🌟",
+      "You choose me again and again — that's why I love you 🔒",
+      "You are my past, present, and future — that's why I love you ⏳",
+      "Without you, my life feels empty — that's why I love you 🌌",
+      "Because Hejab is mine forever — that's why I love you 💍"
+    ];
+
+    function showReason() {
+      const note = document.getElementById("note");
+      const randomIndex = Math.floor(Math.random() * reasons.length);
+      note.innerText = reasons[randomIndex];
+      note.style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('bg_gallery.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0); /* invisible */
+    }
+
+    .hotspot:hover {
+      background: rgba(255, 0, 0, 0.2); /* debugging highlight */
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 683px;
+      top: 724.5px;
+      width: 209px;
+      height: 52px;
+      cursor: pointer;
+      border: none;
+      background: rgba(214, 51, 108, 0.8);
+      border-radius: 12px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .back-btn:hover {
+      background: rgba(180, 20, 80, 0.9);
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Song -->
+  <audio autoplay loop>
+    <source src="dont_you_stop.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Back Button -->
+  <button class="back-btn" onclick="window.location.href='levels.html'">⬅ Back</button>
+
+  <!-- 8 Hidden Clickable Boxes -->
+  <div class="hotspot" style="left:1259.55px; top:623.5px; width:238.11px; height:236px;" onclick="window.location.href='comment1.html'"></div>
+  <div class="hotspot" style="left:1141px; top:346.5px; width:185px; height:194px;" onclick="window.location.href='comment2.html'"></div>
+  <div class="hotspot" style="left:930.5px; top:559px; width:236px; height:231px;" onclick="window.location.href='comment3.html'"></div>
+  <div class="hotspot" style="left:705.5px; top:386.5px; width:214px; height:206px;" onclick="window.location.href='comment4.html'"></div>
+  <div class="hotspot" style="left:498.5px; top:586.5px; width:220px; height:212px;" onclick="window.location.href='comment5.html'"></div>
+  <div class="hotspot" style="left:401px; top:368px; width:209px; height:209px;" onclick="window.location.href='comment6.html'"></div>
+  <div class="hotspot" style="left:153.5px; top:323px; width:176px; height:163px;" onclick="window.location.href='comment7.html'"></div>
+  <div class="hotspot" style="left:183.5px; top:625.5px; width:210px; height:212px;" onclick="window.location.href='comment8.html'"></div>
+
+</body>
+</html>

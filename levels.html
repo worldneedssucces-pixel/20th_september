@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levels</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("bg_levels.png") no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .click-area {
+      position: absolute;
+      cursor: pointer;
+      background: rgba(255, 0, 0, 0); /* fully transparent */
+    }
+
+    /* Special Message button */
+    #special {
+      left: 204px;
+      top: 309px;
+      width: 323px;
+      height: 267px;
+    }
+
+    /* Love Jar button */
+    #lovejar {
+      left: 534px;
+      top: 289px;
+      width: 323px;
+      height: 277px;
+    }
+
+    /* Gallery button */
+    #gallery {
+      left: 863px;
+      top: 284px;
+      width: 313px;
+      height: 268px;
+    }
+
+    /* Gift button */
+    #gift {
+      left: 1177px;
+      top: 296px;
+      width: 315px;
+      height: 292px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clickable areas -->
+  <div id="special" class="click-area"></div>
+  <div id="lovejar" class="click-area"></div>
+  <div id="gallery" class="click-area"></div>
+  <div id="gift" class="click-area"></div>
+
+  <!-- Background music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="music/tu_jaane_na.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    document.getElementById("special").addEventListener("click", () => {
+      window.location.href = "special_message.html";  // ✅ correct filename
+    });
+
+    document.getElementById("lovejar").addEventListener("click", () => {
+      window.location.href = "love_jar.html";
+    });
+
+    document.getElementById("gallery").addEventListener("click", () => {
+      window.location.href = "gallery.html";
+    });
+
+    document.getElementById("gift").addEventListener("click", () => {
+      window.location.href = "gift.html";
+    });
+
+    // Fix autoplay restriction
+    window.addEventListener("click", function() {
+      const music = document.getElementById("bg-music");
+      music.play().catch(() => {});
+    }, { once: true });
+  </script>
+
+</body>
+</html>

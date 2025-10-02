@@ -1,0 +1,139 @@
+/* Global reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background for each page */
+.page {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Hide all invisible buttons by default */
+.invisible-btn {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0); /* fully invisible */
+}
+
+/* 🔹 Start button (on index.html) */
+#start-btn {
+  left: 659.5px;
+  top: 593px;
+  width: 774px;
+  height: 185px;
+}
+
+/* 🔹 Levels Page 1 clickable areas */
+#level-special {
+  left: 204px;
+  top: 309px;
+  width: 323px;
+  height: 267px;
+}
+#level-jar {
+  left: 534px;
+  top: 289px;
+  width: 323px;
+  height: 277px;
+}
+#level-gallery {
+  left: 863px;
+  top: 284.3543px;
+  width: 313px;
+  height: 268.2914px;
+}
+#level-gift {
+  left: 1177px;
+  top: 296.5px;
+  width: 315px;
+  height: 292px;
+}
+
+/* 🔹 Gallery main page: 8 pics */
+#gallery-back {
+  left: 683px;
+  top: 724.5px;
+  width: 209px;
+  height: 52px;
+}
+#gallery-pic1 {
+  left: 1259.5557px;
+  top: 623.5px;
+  width: 238.1115px;
+  height: 236px;
+}
+#gallery-pic2 {
+  left: 1141px;
+  top: 346.5px;
+  width: 185px;
+  height: 194px;
+}
+#gallery-pic3 {
+  left: 930.5px;
+  top: 559px;
+  width: 236px;
+  height: 231px;
+}
+#gallery-pic4 {
+  left: 705.5px;
+  top: 386.5px;
+  width: 214px;
+  height: 206px;
+}
+#gallery-pic5 {
+  left: 498.5px;
+  top: 586.5px;
+  width: 220px;
+  height: 212px;
+}
+#gallery-pic6 {
+  left: 401px;
+  top: 368px;
+  width: 209px;
+  height: 209px;
+}
+#gallery-pic7 {
+  left: 153.5px;
+  top: 323px;
+  width: 176px;
+  height: 163px;
+}
+#gallery-pic8 {
+  left: 183.5px;
+  top: 625.5px;
+  width: 210px;
+  height: 212px;
+}
+
+/* 🔹 Comment page back button (same spot for all 8) */
+.comment-back {
+  left: 1228px;
+  top: 48.5px;
+  width: 237px;
+  height: 80px;
+}
+
+/* 🔹 Special message play button */
+#msg-play {
+  left: 677px;
+  top: 285.0947px;
+  width: 175px;
+  height: 152.9671px;
+}
+
+/* 🔹 Video page back button */
+#msg-video-back {
+  left: 183.2222px;
+  top: 60.6667px;
+  width: 365.4444px;
+  height: 120.3333px;
+}
